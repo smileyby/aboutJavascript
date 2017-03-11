@@ -16,7 +16,7 @@ Javascript 的装载和执行
 	<script type="text/javascript" src="http://coolshell.cn/asyncjs/alert.js"></script>
 ```
 
-基本上来说，head例的上的<script>标签会阻塞后续资源的载入以及整个页面的生成。
+基本上来说，head例的上的script标签会阻塞后续资源的载入以及整个页面的生成。
 
 所以，你知道为啥那么有很对网站把javascript放在网页的最后面了，要么就是动用window.onload或是document ready之类的事件。
 
@@ -24,7 +24,7 @@ Javascript 的装载和执行
 
 ## document.write 方式
 
-于是，你可能以为document.write()这种方式能够解决阻塞问题。你当然会觉得，document.write了的<script>标签后就可以执行后面的东西了，者没错。对于在同一个script标签例的javascript的代码来说，是这样的，但是对于整个页面来说，这个还是会阻塞，下面时一段测试代码：
+于是，你可能以为document.write()这种方式能够解决阻塞问题。你当然会觉得，document.write了的script标签后就可以执行后面的东西了，者没错。对于在同一个script标签例的javascript的代码来说，是这样的，但是对于整个页面来说，这个还是会阻塞，下面时一段测试代码：
 
 ```javascript
 
@@ -58,7 +58,7 @@ IE自从IE6就支持defer，如：
 	<script defer type="text/javascript" src="./alert.js" ></script>
 ```
 
-对于IE来说，这个标签会让IE并行下载js文件，并且把其执行hold到了整个DOM装载完毕（DOMContentLoaded），多个defer的<script>在窒息感时也会按照其出现的顺序来运行。但是因为这个defer只时IE专用，所以一般用的比较少。
+对于IE来说，这个标签会让IE并行下载js文件，并且把其执行hold到了整个DOM装载完毕（DOMContentLoaded），多个defer的script在窒息感时也会按照其出现的顺序来运行。但是因为这个defer只时IE专用，所以一般用的比较少。
 
 而我们标砖的HTML5也加入了一个异步载入javascript的属性：async，无论你对它都什么样的值，只要它出现，它就开始异步加载js文件。但是，async的异步加载会有一个严重的问题，那就是它忠实地碱性者“载入后马上执行”这条军规，所以，虽然它并不阻塞页面渲染，但是你也无法控制他执行的次序和时机。
 
