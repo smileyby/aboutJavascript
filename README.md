@@ -149,6 +149,8 @@ IE自从IE6就支持defer，如：
 
 最后在提两个js，一个事[ControlJs](http://stevesouders.com/controljs/),另一个是[HeadJs](http://headjs.com/)都是专门用来做异步load javascript文件的。
 
+转自[http://coolshell.cn/articles/9749.html#jtss-tsina](http://coolshell.cn/articles/9749.html#jtss-tsina)
+
 
 
 
